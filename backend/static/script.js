@@ -1,0 +1,1 @@
+console.log("SmartVision frontend loaded");

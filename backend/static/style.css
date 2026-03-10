@@ -1,0 +1,41 @@
+body {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+}
+
+.container {
+    margin-top: 80px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00c853;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.result-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+}
+
+table {
+    margin: auto;
+    background-color: #222;
+    color: white;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #00c853;
+}
+
+td, th {
+    padding: 10px;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>SmartVision Security System</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background:#0f172a;
+    color:white;
+    text-align:center;
+}
+
+.container{
+    margin-top:50px;
+}
+
+h1{
+    font-size:40px;
+}
+
+.upload-box{
+    background:#1e293b;
+    padding:30px;
+    border-radius:10px;
+    display:inline-block;
+}
+
+input[type=file]{
+    margin:20px;
+}
+
+button{
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:6px;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#16a34a;
+}
+
+.result{
+    margin-top:30px;
+    font-size:22px;
+}
+
+.granted{
+    color:#22c55e;
+}
+
+.denied{
+    color:#ef4444;
+}
+
+.dashboard-btn{
+    margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>SmartVision AI Security</h1>
+
+<div class="upload-box">
+
+<form method="POST" enctype="multipart/form-data">
+
+<input type="file" name="image" required>
+
+<br>
+
+<button type="submit">Check Identity</button>
+
+</form>
+
+</div>
+
+{% if name %}
+
+<div class="result">
+
+<p><b>Name:</b> {{name}}</p>
+
+<p><b>Confidence:</b> {{confidence}}%</p>
+
+<p class="{% if status == 'Access Granted' %}granted{% else %}denied{% endif %}">
+{{status}}
+</p>
+
+</div>
+
+{% endif %}
+
+<div class="dashboard-btn">
+
+<a href="/dashboard">
+<button>Open Security Dashboard</button>
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
